@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dex
+data:
+  config.yaml: |
+    issuer: $(issuer)
+    storage:
+      type: kubernetes
+      config:
+        inCluster: true
+    web:
+      http: 0.0.0.0:5556
+    logger:
+      level: "debug"
+      format: text
+    connectors:
+    - type: microsoft
+      id: microsoft
+      name: Microsoft
+      config:
+        clientID: $(microsoft_client_id)
+        clientSecret: $(microsoft_secret)
+        redirectURI: $(issuer)/callback
+        tenant: $(microsoft_tenant)
+    oauth2:
+      skipApprovalScreen: true
+    enablePasswordDB: true
+    staticPasswords:
+    - email: $(static_email)
+      hash: $(static_password_hash)
+      username: $(static_username)
+      userID: $(static_user_id)
+    staticClients:
+    - id: $(client_id)
+      redirectURIs: $(oidc_redirect_uris)
+      name: 'Dex Login Application'
+      secret: $(application_secret)

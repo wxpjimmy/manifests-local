@@ -1,0 +1,16 @@
+varReference:
+- path: metadata/name
+    kind: Namespace
+- path: spec/selector
+    kind: Service
+- path: spec/rules/services
+    kind: ServiceRole
+- path: spec/selector/matchLabels
+    kind: Deployment
+- path: spec/template/metadata/labels
+    kind: Deployment
+- path: spec/selector/matchLabels
+    kind: PodDisruptionBudget
+- path: metadata/name
+    kind: HorizontalPodAutoscaler 
+    
