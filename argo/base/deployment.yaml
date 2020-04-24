@@ -62,7 +62,6 @@ metadata:
   labels:
     app: workflow-controller
   name: workflow-controller
-  namespace: kubeflow
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
