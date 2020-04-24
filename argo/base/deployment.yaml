@@ -5,7 +5,6 @@ metadata:
   labels:
     app: argo-ui
   name: argo-ui
-  namespace: kubeflow
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
