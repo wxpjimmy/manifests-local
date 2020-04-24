@@ -3,7 +3,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: pytorch-operator
-  name: pytorch-operator
+  name: pytorch-operator-$(namespace)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

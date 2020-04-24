@@ -4,7 +4,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: argo
-  name: argo
+  name: argo-$(namespace)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -18,7 +18,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: argo-ui
-  name: argo-ui
+  name: argo-ui-$(namespace)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

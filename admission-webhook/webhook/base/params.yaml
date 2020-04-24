@@ -5,3 +5,5 @@ varReference:
   kind: MutatingWebhookConfiguration
 - path: webhooks/name
   kind: MutatingWebhookConfiguration
+- path: metadata/name
+  kind: ClusterRoleBinding

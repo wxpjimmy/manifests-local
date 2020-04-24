@@ -25,5 +25,12 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.project
+- name: namespace
+  objref:
+    kind: ConfigMap
+    name: parameters
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.namespace
 configurations:
 - params.yaml

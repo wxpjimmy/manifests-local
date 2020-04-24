@@ -7,9 +7,20 @@ resources:
 - deployment.yaml
 - service-account.yaml
 - service.yaml
+vars:
+- fieldref:
+    fieldPath: metadata.namespace
+  name: namespace
+  objref:
+    apiVersion: v1
+    kind: Service
+    name: pytorch-operator
 commonLabels:
   kustomize.component: pytorch-operator
 images:
 - name: gcr.io/kubeflow-images-public/pytorch-operator
   newName: gcr.io/kubeflow-images-public/pytorch-operator
   newTag: v1.0.0-g047cf0f
+
+configurations:
+- params.yaml

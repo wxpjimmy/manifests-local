@@ -17,8 +17,7 @@ images:
   newName: gcr.io/kubeflow-images-public/notebook-controller
   newTag: v1.0.0-gcd65ce25
 configMapGenerator:
-- envs:
-  - params.env
+- env: params.env
   name: parameters
 generatorOptions:
   disableNameSuffixHash: true
@@ -44,3 +43,12 @@ vars:
     apiVersion: v1
     kind: ConfigMap
     name: parameters
+- fieldref:
+    fieldPath: metadata.namespace
+  name: namespace
+  objref:
+    apiVersion: v1
+    kind: Service
+    name: service
+configurations:
+- params.yaml

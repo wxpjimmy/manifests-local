@@ -1,3 +1,5 @@
 varReference:
 - path: spec/template/spec/containers/image
   kind: StatefulSet
+- path: metadata/name
+  kind: ClusterRoleBinding

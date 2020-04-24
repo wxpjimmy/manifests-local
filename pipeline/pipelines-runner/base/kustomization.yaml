@@ -7,3 +7,13 @@ resources:
 - cluster-role-binding.yaml
 - cluster-role.yaml
 - service-account.yaml
+vars:
+- name: namespace
+  objref:
+    apiVersion: v1
+    kind: ServiceAccount
+    name: pipeline-runner
+  fieldref:
+    fieldPath: metadata.namespace
+configurations:
+- params.yaml

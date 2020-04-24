@@ -4,7 +4,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: tf-job-operator
-  name: tf-job-operator
+  name: tf-job-operator-$(namespace)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

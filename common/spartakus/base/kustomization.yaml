@@ -24,5 +24,12 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.usageId
+- name: namespace
+  objref:
+    apiVersion: v1
+    kind: ServiceAccount
+    name: spartakus
+  fieldref:
+    fieldPath: metadata.namespace
 configurations:
 - params.yaml

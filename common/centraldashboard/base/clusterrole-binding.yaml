@@ -3,7 +3,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: centraldashboard
-  name: centraldashboard
+  name: centraldashboard-$(namespace)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

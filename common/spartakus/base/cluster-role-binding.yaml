@@ -3,7 +3,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: spartakus
-  name: spartakus
+  name: spartakus-$(namespace)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
