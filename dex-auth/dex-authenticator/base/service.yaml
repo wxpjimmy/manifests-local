@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 5555
     targetPort: 5555
-    nodePort: 32002
+    # nodePort: 32002
     protocol: TCP
     name: http
   selector:
