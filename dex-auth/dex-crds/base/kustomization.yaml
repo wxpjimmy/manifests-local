@@ -96,13 +96,6 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.microsoft_tenant
-- name: namespace
-  objref:
-    kind: Service
-    name: dex
-    apiVersion: v1
-  fieldref:
-    fieldpath: metadata.namespace
 configurations:
 - params.yaml
 images:
