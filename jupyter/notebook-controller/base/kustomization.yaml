@@ -14,8 +14,8 @@ commonLabels:
   kustomize.component: notebook-controller
 images:
 - name: gcr.io/kubeflow-images-public/notebook-controller
-  newName: gcr.io/kubeflow-images-public/notebook-controller
-  newTag: v1.0.0-gcd65ce25
+  newName: xpacrdemo.azurecr.io/kubeflow-images-public/notebook-controller
+  newTag: test
 configMapGenerator:
 - env: params.env
   name: parameters

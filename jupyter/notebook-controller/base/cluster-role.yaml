@@ -47,6 +47,14 @@ rules:
   - virtualservices
   verbs:
   - '*'
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - get
+  - list
+  - watch
 
 ---
 
