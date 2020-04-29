@@ -33,7 +33,7 @@ spec:
         - name: USERID_PREFIX
           value: $(userid-prefix)
         - name: PROFILES_KFAM_SERVICE_HOST
-          value: profiles-kfam.$(namespace)
+          value: profiles-kfam.kubeflow
         - name: ROOT_NAMESPACE
           value: $(namespace)
       serviceAccountName: centraldashboard
